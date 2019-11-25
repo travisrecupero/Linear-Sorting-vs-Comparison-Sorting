@@ -2,15 +2,11 @@
 #define SELECTION_H 
 
 
-class selection{
-	private:
-		int arr[];
+class Selection{
 
 	public:
 		void sort(int array[], int size);
 		void swap(int *, int *);
-
-
 
 };
 
