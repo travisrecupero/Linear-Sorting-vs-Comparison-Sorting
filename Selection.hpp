@@ -7,8 +7,8 @@ class selection{
 		int arr[];
 
 	public:
-		void sort(int arr[]);
-
+		void sort(int array[], int size);
+		void swap(int *, int *);
 
 
 
