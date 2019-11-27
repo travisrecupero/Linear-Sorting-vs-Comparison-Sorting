@@ -3,7 +3,8 @@
 #include <vector>
 
 int main(int argc, char * argv[]){
-  std::vector<int> list = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-  Quicksort::swap(list, 0, list.size()-1);
+	Quicksort qs;
+	std::vector<int> list = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+	qs.swap(list, 0, list.size()-1);
   return 0;
 }
