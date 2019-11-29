@@ -1,12 +1,11 @@
 #include "Selection.hpp"
 #include <iostream>
 #include <cstdlib>
-#include <vector>
 #include <algorithm>
 
 
 
-void Selection::sort(vector<int>& vect){
+void Selection::sort(std::vector<int>& vect){
 
 	int minimumIndex = 0;
 
@@ -18,7 +17,7 @@ void Selection::sort(vector<int>& vect){
 			}
 		}
 		if(minimumIndex != i){
-			swap(vect[minimumIndex], vect[i]);
+			std::swap(vect[minimumIndex], vect[i]);
 		}
 	}
 
