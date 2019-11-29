@@ -1,26 +1,20 @@
 #include "Selection.hpp"
 #include <iostream>
 #include <cstdlib>
+#include <vector>
 
-
-void Selection::sort(int[] array, int size){
+void Selection::sort(vector<int>& vect){
 	
 	int minimumIndex = 0;
 	
-	for(int i = 0; i < size-1; i++){
+	for(int i = 0; i < vect.size() - 1; i++){
 		minimumIndex = i;
-		for(int j = i + 1; j < size; j++){
-			if(array[j] < array[minimumIndex]){
+		for(int j = i + 1; j < vect.size(); j++){
+			if(vect.at(j) < vect.at(minimumIndex)){
 				minimumIndex = j;
 			}
-			swap(&array[minimumIndex], &array[i]);
+			swap(vect[minimumIndex], vect[i]);
 		}
 	}
-}
-
-void Selection::swap(int *minPointer, int *currPointer){
-	int temp = *minPointer;
-	*minPointer = *currPointer;
-	*currPointer = temp;
 }
 
