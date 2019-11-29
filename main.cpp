@@ -41,7 +41,7 @@ int main(int argc, char * argv[]){
 	auto starts = std::chrono::high_resolution_clock::now();
 	ss.sort(ss_vec);
 	auto stops = std::chrono::high_resolution_clock::now();
-	auto times = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+	auto times = std::chrono::duration_cast<std::chrono::microseconds>(stops - starts);
 	std::cout <<"Selection Sort took a total of: " << times.count() << " microseconds to complete." << std::endl;
 	//end of selection sort
 
@@ -50,7 +50,7 @@ int main(int argc, char * argv[]){
 	auto startr = std::chrono::high_resolution_clock::now();
 	rs.sort(rs_vec);
 	auto stopr = std::chrono::high_resolution_clock::now();
-	auto timer = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+	auto timer = std::chrono::duration_cast<std::chrono::microseconds>(stopr - startr);
 	std::cout <<"Radix Sort took a total of: " << timer.count() << " microseconds to complete." << std::endl;
 	//end of Radix sort
 
