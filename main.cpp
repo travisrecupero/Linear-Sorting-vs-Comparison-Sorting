@@ -1,6 +1,6 @@
 #include "main.hpp"
 #include "Quicksort.hpp"
-//#include "Selection.hpp"
+#include "Selection.hpp"
 #include "Radix.hpp"
 #include <vector>
 #include <chrono>
@@ -36,14 +36,14 @@ int main(int argc, char * argv[]){
 	std::cout << "Quicksort took a total of: " << time.count() << " microseconds to complete." << std::endl;
 	//end of quicksort
 
-	/*//this is where the selection sort algortihm runs
+	//this is where the selection sort algortihm runs
 	Selection ss;
-	auto start = std::chrono::high_resolution_clock::now();
+	auto starts = std::chrono::high_resolution_clock::now();
 	ss.sort(ss_vec);
-	auto stop = std::chrono::high_resolution_clock::now();
-	auto time = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
-	std::cout <<"Selection Sort took a total of: " << time.count() << " microseconds to complete." << std::endl;
-	//end of selection sort*/
+	auto stops = std::chrono::high_resolution_clock::now();
+	auto times = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+	std::cout <<"Selection Sort took a total of: " << times.count() << " microseconds to complete." << std::endl;
+	//end of selection sort
 
 	//this is where the Radix sort algortihm runs
 	Radix rs;
