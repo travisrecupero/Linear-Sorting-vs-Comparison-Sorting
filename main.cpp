@@ -35,7 +35,7 @@ int main(int argc, char * argv[]){
 
 	//this is where the selection sort algortihm runs
 	Selection ss;
-	auto start = std::chrono::high_resolution::now();
+	auto start = std::chrono::high_resolution_clock::now();
 	ss.sort(ss_vec);
 	auto stop = std::chrono::high_resolution_clock::now();
 	auto time = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
