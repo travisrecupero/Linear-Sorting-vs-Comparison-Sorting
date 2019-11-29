@@ -7,8 +7,14 @@
 #include <fstream>
 
 int main(int argc, char * argv[]){
+	if( argc != 2){
+		std::cerr<< "Incorrect arguments. Proper arguments: ./final <inputfile>" << std::endl;
+		return -1;
+	}
 	std::vector<int> inp_vec;
-	readFile(inp_vec,argv[1]);
+	if(readFile(inp_vec,argv[1]) == -1){
+		return -1;
+	}
 	std::vector<int> qs_vec(inp_vec);
 
 	//this is where the quicksort algorithm runs
@@ -26,6 +32,10 @@ int main(int argc, char * argv[]){
 int readFile(std::vector<int> &vec, std::string inputFile){
 	std::ifstream input;
 	input.open(inputFile);
+	if(!input.is_open()){
+		std::cerr << "Error opening file. " << std::endl;
+		return -1;
+	}
 	std::string line;
 	while(getline(input, line)){
 		vec.push_back(std::stoi(line));
